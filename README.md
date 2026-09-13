@@ -20,6 +20,18 @@ downloads in the background, and installs silently — your hero, level, stage,
 gear and gold come back exactly as you left them, down to whether you had the
 playable area hidden. There is nothing to click and nothing to restart.
 
+## Beta builds
+
+These releases are the ones chosen to go out. Every change lands first in
+[TTF-Beta-Release](https://github.com/fishbill88/TTF-Beta-Release), and only
+gets promoted here once it has been run for a while.
+
+To take the early builds instead, tick **Participate in beta test** in the
+game's ⚙ settings panel. It is off by default, it is remembered per machine
+rather than per account, and it takes effect without reinstalling anything.
+Unticking it does not roll you back — the app never downgrades, so you simply
+stop receiving builds until this feed catches up.
+
 ## What is in a release
 
 | file | |
@@ -27,6 +39,7 @@ playable area hidden. There is nothing to click and nothing to restart.
 | `TaskTopFight-Setup-<version>.exe` | the installer — this is the one you want |
 | `latest.yml` | the update feed the installed app polls |
 | `*.blockmap` | lets an update download only the changed parts, not the whole 80 MB |
+| `TaskTopFight-RoomServer-<version>.zip` | the Tower room server, from the same commit |
 
 The last two are for the app, not for you. Don't delete them from a release:
 that breaks auto-update for everyone still on an older build.
@@ -45,5 +58,5 @@ also means keys reach it only through these:
 
 ---
 
-Releases here are published automatically by CI. Nothing in this repository is
-edited by hand.
+Releases here are published by the **promote** workflow in the beta repo, run by
+hand. Nothing in this repository is edited by hand.
